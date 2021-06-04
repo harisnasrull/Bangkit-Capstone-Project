@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pari</string>
+    <string name="lanjutkan">Lanjutkan</string>
+    <string name="lewati">Lewati</string>
 </resources>
