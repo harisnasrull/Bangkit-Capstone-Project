@@ -32,19 +32,14 @@ class OnBoardingActivity : AppCompatActivity() {
         onBoardingAdapter = OnBoardingAdapter(
             listOf(
                 OnBoardingItem(
-                    image = R.drawable.oboarding1,
+                    image = R.drawable.onboarding1,
                     title = "Aplikasi Untuk Petani",
-                    desc = "Melalui aplikasi  ini kami ingin \n" +
-                            "membantu petani padi untuk \n" +
-                            "mendeteksi lebih awal permasalahan \n" +
-                            "pada tanaman mereka",
+                    desc = "Melalui aplikasi  ini kami ingin membantu petani padi untuk mendeteksi lebih awal permasalahan pada tanaman mereka",
                 ),
                 OnBoardingItem(
-                    image = R.drawable.oboarding2,
+                    image = R.drawable.onboarding2,
                     title = "Cukup foto sehelai daun",
-                    desc = "Ambil foto sampel daun padi\n" +
-                            "dan aplikasi akan memrosesnya\n" +
-                            "secara otomatis",
+                    desc = "Ambil foto sampel daun padi dan aplikasi akan memrosesnya secara otomatis",
                 )
             )
         )

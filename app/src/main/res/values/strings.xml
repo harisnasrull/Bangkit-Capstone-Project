@@ -2,4 +2,6 @@
     <string name="app_name">Pari</string>
     <string name="lanjutkan">Lanjutkan</string>
     <string name="lewati">Lewati</string>
+    <string name="take_picture">Ambil Gambar</string>
+    <string name="kembali_ke_menu_utama">Kembali ke Menu Utama</string>
 </resources>
