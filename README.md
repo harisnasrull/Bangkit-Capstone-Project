@@ -1,5 +1,4 @@
-# Bangkit-Capstone-Project
-## How to replicate our reasearch
+# How to replicate our reasearch
 
 ## 1. Download the datasets
 Our dataset is a set of images we get from combining [1] and [2] and preprocessing the dataset by resizing all the images in the dataset. We resized all the images into 256 x 256 pixels by using Python Image Library (PIL). Our combined dataset contains 6 different classes (Blast, Blight, Brownspot, Hispa, Healthy, Tungro) and we have 80 images for each class.
