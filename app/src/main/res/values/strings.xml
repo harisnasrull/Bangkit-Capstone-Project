@@ -4,4 +4,6 @@
     <string name="lewati">Lewati</string>
     <string name="take_picture">Ambil Gambar</string>
     <string name="kembali_ke_menu_utama">Kembali ke Menu Utama</string>
+    <string name="category">Category</string>
+    <string name="detail_category">Detail Category</string>
 </resources>
