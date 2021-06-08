@@ -17,6 +17,6 @@ After that, we train the model with the dataset we get from the first step. And 
 
 ## 4. Create an API to connect our mobile App to our cloud server
 
-## 5. Create a mobile App for Android
+## 5. Create the mobile App for Android
 
 
