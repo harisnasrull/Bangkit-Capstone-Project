@@ -6,6 +6,7 @@ Our dataset is a set of images we get from combining [1] and [2] and preprocessi
 
 References:
 [1] Perreira, J. (2019, November). Rice Disease, Version 1. Retrieved May 18, 2021 from https://www.kaggle.com/jonathanrjpereira/rice-disease.
+
 [2] Setiady, T. (2021, May). Leaf Rice Disease, Version 1. Retrieved May 19, 2021 from https://www.kaggle.com/tedisetiady/leaf-rice-disease-indonesia.
 
 ## 2. Create a Deep Learning model using TensorFlow
