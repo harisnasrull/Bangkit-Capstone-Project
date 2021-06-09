@@ -10,7 +10,7 @@ Our dataset is a set of images we get from combining [1] and [2] and preprocessi
 ## 2. Create a Deep Learning model using TensorFlow
 We did't build the model from scratch, we used transfer learning method instead. our model is based on VGG19 architecture that has been trained on ImageNet dataset. In our model, we add some layers on top of the base model and then train the model using the dataset we get from the first step. And the last part of this step is to export the model.
 
-For the better explaination, you can visit this notebook: https://colab.research.google.com/drive/1cVeFRl9KXwEUfDWlQiV0DKiTLQMAmOSB?usp=sharing
+For the better explanation, you can visit this notebook: https://colab.research.google.com/drive/1cVeFRl9KXwEUfDWlQiV0DKiTLQMAmOSB?usp=sharing
 
 ## 3. Deploy the model on the cloud server
 
