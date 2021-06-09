@@ -6,4 +6,6 @@
     <string name="kembali_ke_menu_utama">Kembali ke Menu Utama</string>
     <string name="category">Category</string>
     <string name="detail_category">Detail Category</string>
+    <string name="dummy_category">Tungro</string>
+    <string name="dummy_detail">Penyakit ini diasosiakan dengan dua virus, yakni RTBV dan RTSV yang umumnya disebarkan oleh serangga. Beberapa gejala yang dapat timbul akibat tungro adalah stunting dan adanya warna kuning sampai oranye di daun tanaman.</string>
 </resources>

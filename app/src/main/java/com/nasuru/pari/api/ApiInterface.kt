@@ -1,6 +1,7 @@
 package com.nasuru.pari.api
 
 import com.nasuru.pari.model.ImageResponse
+import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Multipart
@@ -15,9 +16,16 @@ interface ApiInterface {
     }
 
     @Multipart
-    @POST("api/predict")
-    fun uploadImage(
-        @Part("image\"; filename=\"myfile.jpg\" ") file: RequestBody?
+    @POST("retrofit_example/upload_image.php")
+    fun uploadFile(
+        @Part file: MultipartBody.Part?,
+        @Part("image") image: RequestBody?
     ): Call<ImageResponse>
+
+//    @Multipart
+//    @POST("api/predict")
+//    fun uploadImage(
+//        @Part("image\"; filename=\"myfile.jpg\" ") file: RequestBody?
+//    ): Call<ImageResponse>
 
 }

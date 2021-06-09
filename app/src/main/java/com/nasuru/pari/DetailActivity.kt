@@ -5,16 +5,20 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.nasuru.pari.databinding.ActivityDetailBinding
 import com.nasuru.pari.helper.BitmapHelper
+import okhttp3.MediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
+
 
 class DetailActivity : AppCompatActivity() {
 
@@ -32,6 +36,17 @@ class DetailActivity : AppCompatActivity() {
             binding.imageCamera.setImageURI(uri)
 
 //            binding.category.text = uri.toString()
+            var file = ContextWrapper(applicationContext).getDir("Images", Context.MODE_PRIVATE)
+            file = File(file, "images.jpg")
+            val requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file)
+
+            val body = MultipartBody.Part.createFormData("image", file.name, requestFile)
+
+//            ApiClient.apiInstances
+//                .uploadFile(body,requestFile)
+//                .enqueue()
+            binding.category.text = getString(R.string.dummy_category)
+            binding.detailCategory.text = getString(R.string.dummy_detail)
         } else {
             Toast.makeText(applicationContext,"bitmap not found.",Toast.LENGTH_SHORT).show()
         }
@@ -48,15 +63,11 @@ class DetailActivity : AppCompatActivity() {
 
     private fun bitmapToFile(bitmap: Bitmap): Uri {
 
-        // Get the context wrapper
         val wrapper = ContextWrapper(applicationContext)
-
-        // Initialize a new file instance to save bitmap object
         var file = wrapper.getDir("Images", Context.MODE_PRIVATE)
         file = File(file, "images.jpg")
 
         try {
-            // Compress the bitmap and save in jpg format
             val stream: OutputStream = FileOutputStream(file)
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
             stream.flush()
@@ -65,7 +76,6 @@ class DetailActivity : AppCompatActivity() {
             e.printStackTrace()
         }
 
-        // Return the saved bitmap uri
         return Uri.parse(file.absolutePath)
     }
 }
