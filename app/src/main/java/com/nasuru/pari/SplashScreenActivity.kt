@@ -1,20 +1,38 @@
 package com.nasuru.pari
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 
 class SplashScreenActivity : AppCompatActivity() {
+
+    private lateinit var onBoardingScreen: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, OnBoardingActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, 3000)
+            onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE)
+            val isFirstTime = onBoardingScreen.getBoolean("firstTime", true)
+            if (isFirstTime) {
+                val editor = onBoardingScreen.edit()
+                editor.putBoolean("firstTime", false)
+                editor.apply()
+                startActivity(Intent(this, OnBoardingActivity::class.java))
+                finish()
+            } else {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }
+        }, 3500)
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            val intent = Intent(this, OnBoardingActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }, 3000)
     }
 }
