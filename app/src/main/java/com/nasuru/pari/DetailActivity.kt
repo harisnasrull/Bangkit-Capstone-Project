@@ -8,6 +8,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.nasuru.pari.databinding.ActivityDetailBinding
 import com.nasuru.pari.helper.BitmapHelper
 import java.io.File
@@ -38,6 +39,10 @@ class DetailActivity : AppCompatActivity() {
         binding.buttonBack.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.license.setOnClickListener {
+            startActivity(Intent(this, OssLicensesMenuActivity::class.java))
         }
     }
 
